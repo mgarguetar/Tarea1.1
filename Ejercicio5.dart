@@ -33,11 +33,21 @@ class CuentaBancaria{
 }
 
 void main() {
-  CuentaBancaria cuenta = CuentaBancaria(titular: "Juan Pérez", saldo: 1000.0);
-  cuenta.consltarSaldo();
+  CuentaBancaria cuenta1 = CuentaBancaria(titular: "Juan Pérez", saldo: 1000.0);
+  cuenta1.consltarSaldo();
   print("Depositando 500");
-  cuenta.depositar(500.0);
+  cuenta1.depositar(500.0);
   print("retirando 200");
-  cuenta.retirar(200.0);
-  cuenta.consltarSaldo();
+  cuenta1.retirar(200.0);
+  cuenta1.consltarSaldo();
+
+  print("\n");
+  CuentaBancaria cuenta2 = CuentaBancaria(titular: "María López", saldo: 2000.0);
+  print("Prueba de errores:");
+  cuenta2.consltarSaldo();
+  print("Depositando -500");
+  cuenta2.depositar(-500.0);
+  print("retirando 3000");
+  cuenta2.retirar(3000.0);
+  cuenta2.consltarSaldo();
 }
